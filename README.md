@@ -2,7 +2,7 @@
 ======
 
 ```
-sudo docker build -t onokonem/graphite https://github.com/onokonem/graphite-docker.git
+sudo docker build -t kailu/graphite https://github.com/kailu/graphite-docker.git
 
 sudo mkdir -vp /storage/docker/graphite
 sudo touch /storage/docker/graphite/index
@@ -16,5 +16,5 @@ sudo docker run \
   -p 8080:8080 \
   -p 2003:2003 \
   -p 8125:8125/udp \
-  onokonem/graphite
+  kailu/graphite
 ```
