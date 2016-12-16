@@ -6,14 +6,16 @@ FROM ubuntu:14.04.2
 # This suppresses a bunch of annoying warnings from debconf
 ENV DEBIAN_FRONTEND noninteractive
 
+#uncomment this line if you are building the image from China...
+COPY sources.list /etc/apt/sources.list
 # Install system dependencies
 RUN \
- # apt-get -qq update && \
-  apt-get -qq install -y software-properties-common && \
- # add-apt-repository -y ppa:chris-lea/node.js && \
- # add-apt-repository -y ppa:nginx/stable && \
- # apt-get -qq update -y && \
-  apt-get -qq install -y build-essential curl \
+  apt-get  update && \
+  apt-get  install -y software-properties-common && \
+  add-apt-repository -y ppa:chris-lea/node.js && \
+  add-apt-repository -y ppa:nginx/stable && \
+  apt-get  update -y && \
+  apt-get  install -y build-essential curl \
     # Graphite dependencies
     python-dev libcairo2-dev libffi-dev python-pip \
     # Supervisor
