@@ -8,11 +8,11 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install system dependencies
 RUN \
-  apt-get -qq update && \
+ # apt-get -qq update && \
   apt-get -qq install -y software-properties-common && \
  # add-apt-repository -y ppa:chris-lea/node.js && \
  # add-apt-repository -y ppa:nginx/stable && \
-  apt-get -qq update -y && \
+ # apt-get -qq update -y && \
   apt-get -qq install -y build-essential curl \
     # Graphite dependencies
     python-dev libcairo2-dev libffi-dev python-pip \
