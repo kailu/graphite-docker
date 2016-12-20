@@ -7,7 +7,7 @@ FROM ubuntu:14.04.2
 ENV DEBIAN_FRONTEND noninteractive
 
 #uncomment this line if you are building the image from China...
-COPY sources.list /etc/apt/sources.list
+#COPY sources.list /etc/apt/sources.list
 # Install system dependencies
 RUN \
   apt-get  update && \
